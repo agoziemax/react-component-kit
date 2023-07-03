@@ -1,32 +1,25 @@
 import './App.css';
-import Button from './Button';
-import { FaBeer, FaSearch } from 'react-icons/fa';
+import Accordion from './components/Accordion';
 
 function App() {
-  return (
-    <div className='App pl-3 pt-2'>
-      <div>
-        <Button className=''>
-          Click me!! <FaSearch />
-        </Button>
-      </div>
-      <div>
-        <Button className='bg-red-500 text-white'>Buy Now!!</Button>
-      </div>
-      <div>
-        <Button className='bg-green-500 text-white rounded p-2'>See Deal</Button>
-      </div>
-      <div>
-        <Button>Complete</Button>
-      </div>
-      <div>
-        <Button>Continue</Button>
-      </div>
-      <div>
-        <Button>Search</Button>
-      </div>
-    </div>
-  );
-}
+  const items = [
+    {
+      label: 'Proverbs 20 vs 24',
+      content: `It is the Lord who directs my life,
+        for each step i take is ordained by God to bring me closer to my destiny.
+        So much of my life then remains a mystery.`,
+    },
+    {
+      label: 'Proverbs 10 vs 24',
+      content: 'If you faint in the day of adversity, then your strngth is little.',
+    },
+    {
+      label: '2 Timothy 2 vs 4',
+      content: `A soldier on active duty doesnt get caught up in the marketplace making deals. He concentrates op
+      carrying out orders`,
+    },
+  ];
 
+  return <Accordion items={items} />;
+}
 export default App;
