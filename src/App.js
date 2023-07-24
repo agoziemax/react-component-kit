@@ -1,5 +1,7 @@
 import './App.css';
 import Accordion from './components/Accordion';
+import { Routes, Route } from 'react-router-dom';
+import TablePage from './pages/TablePage';
 
 function App() {
   const items = [
@@ -20,6 +22,16 @@ function App() {
     },
   ];
 
-  return <Accordion items={items} />;
+  return (
+    <div>
+      {/* <Accordion items={items} />; */}
+
+      <Routes>
+        <Route path='/' element={<TablePage />} />
+
+      </Routes>
+
+    </div>
+  );
 }
 export default App;
