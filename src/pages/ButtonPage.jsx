@@ -6,7 +6,7 @@ function ButtonPage() {
   return (
     <div className='App pl-3 pt-2'>
       <div>
-        <Button className=' bg-red-500'>
+        <Button className=' ' onClick={() => console.log('I got clicked')}>
           Click me!! <FaSearch />
         </Button>
       </div>
