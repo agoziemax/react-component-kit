@@ -3,6 +3,8 @@ import Accordion from './components/Accordion';
 import { Routes, Route } from 'react-router-dom';
 import TablePage from './pages/TablePage';
 
+import ButtonPage from './pages/ButtonPage';
+
 function App() {
   const items = [
     {
@@ -25,12 +27,11 @@ function App() {
   return (
     <div>
       {/* <Accordion items={items} />; */}
+      <ButtonPage />
 
       <Routes>
         <Route path='/' element={<TablePage />} />
-
       </Routes>
-
     </div>
   );
 }

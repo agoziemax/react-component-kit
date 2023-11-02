@@ -1,4 +1,4 @@
-import './App.css';
+// import './App.css';
 import Button from '../components/Button';
 import { FaBeer, FaSearch } from 'react-icons/fa';
 
@@ -6,7 +6,7 @@ function ButtonPage() {
   return (
     <div className='App pl-3 pt-2'>
       <div>
-        <Button className=''>
+        <Button className=' bg-red-500'>
           Click me!! <FaSearch />
         </Button>
       </div>

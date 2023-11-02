@@ -4,10 +4,15 @@ import className from 'classnames';
 const finalClassName = className({
   'bg-blue-500': true,
 });
-function Button({ children, className, primary, secondary, success, warning, outline, rounded }) {
+
+function Button({ children, className, primary, secondary, success, warning, outline, rounded, ...rest }) {
 
   //this children props is an inbuilt feature of React that allows you to put any value when rendering the component
-  return <button className={`bg-blue-500 text-white m-2 w-auto flex p-3  ${className}`}>{children}</button>;
+  return (
+    <button className={`bg-blue-500 text-white m-2 w-auto flex p-3  ${className}`} {...rest}>
+      {children}
+    </button>
+  );
 }
 
 Button.propTypes = {
